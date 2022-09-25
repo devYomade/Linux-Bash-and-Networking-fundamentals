@@ -14,11 +14,7 @@
 `remote: Support for password authentication was removed on August 13, 2021.
 remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.`
 - So i logged into my github account and went to the developer settings to generate a github access token, which i used instead of a password while logging into my github from my terminal.
-- After i succesffuly cloned the project to my local machine 
-<br>
-
-
-- Then i ran the command `git config -l`
+- After i succesffuly cloned the project to my local machine then i ran the command `git config -l`
 <br>
 
 ![git config -l](https://user-images.githubusercontent.com/105651785/192138041-9192de74-2802-4d26-99e0-03eaf3615cb8.png)
