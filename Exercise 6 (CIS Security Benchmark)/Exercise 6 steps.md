@@ -15,7 +15,7 @@
 - It is critical to ensure that the /etc/passwd- file is protected from unauthorized access. 
 Although it is protected by default, the file permissions could be changed either 
 inadvertently or through malicious actions.
-- So i ran the command `stat /etc/passwd-` to make sure that `uid` and `gid` are booth `0/root` and Access is `644 or more ristrictive.
+- So i ran the command `stat /etc/passwd-` to make sure that `uid` and `gid` are both `0/root` and `Access` is `644` or more ristrictive.
 <br>
 
 ![stat 2](https://user-images.githubusercontent.com/105651785/192494841-b724bfc4-6c42-4220-9e4f-ef2a0f9651eb.png)
@@ -24,7 +24,7 @@ inadvertently or through malicious actions.
 affects permissions of files that are created by the root user.
 - Using GID 0 for the root account helps prevent root -owned files from accidentally 
 becoming accessible to non-privileged users.
-- So i ran the command `grep "^root:" /etc/passwd | cut -f4 -d:` to verify the result is 0.
+- So i ran the command `grep "^root:" /etc/passwd | cut -f4 -d:` to verify the result is `0`.
 <br> 
 
 ![stat 3](https://user-images.githubusercontent.com/105651785/192497032-1f1f4838-4284-4b28-b90a-dd91853cffe8.png)
@@ -45,7 +45,7 @@ service discovery. Avahi allows programs to publish and discover services and ho
 running on a local network with no specific configuration. For example, a user can plug a 
 computer into a network and Avahi automatically finds printers to print to, files to look at 
 and people to talk to, as well as network services running on the machine.
-- So i ran the following command to verify `avahi-daemon` is not installed ` dpkg -s avahi-daemon | grep -E '(Status:|not installed)'`
+- So i ran the following command to verify `avahi-daemon` is not installed: ` dpkg -s avahi-daemon | grep -E '(Status:|not installed)'`
 <br>
 
 ![Stat 5](https://user-images.githubusercontent.com/105651785/192512668-ed76fa9e-bff0-4e09-8edd-4226bb9057de.png).
