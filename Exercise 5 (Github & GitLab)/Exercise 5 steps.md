@@ -14,6 +14,7 @@
 `remote: Support for password authentication was removed on August 13, 2021.
 remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.`
 - So i logged into my github account and went to the developer settings to generate a github access token, which i used instead of a password while logging into my github from my terminal.
+- Then i moved on to cloning my altschool project from my github to my local machine with the command `git clone [https]`.
 - After i succesffuly cloned the project to my local machine then i ran the command `git config -l`
 <br>
 
