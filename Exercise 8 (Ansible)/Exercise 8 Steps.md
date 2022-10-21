@@ -20,16 +20,26 @@
 - After that i went to a open another terminal and ssh into a slave machine on the multi machine for east movement, and then i edited the `sshd_config` to allow password authentication with the command `sudo nano /etc/ssh/sshd_config`.
 <br>
 
+![sshd_config](https://user-images.githubusercontent.com/105651785/197263860-5827c1fd-5eac-482a-b88e-066257cb4aef.png)
+
 - Then i went to line 58 and change `PasswordAuthentication no` to `PasswordAuthentication yes` and saved the changes.
 - Then i restatrted the service with the command `sudo systemcl restart sshd`
 - And then i generated the ssh-keygen and copied it to the master machine with the command `ssh-copy-id -i vagrant@[ip address]`.
 - Then i went back to the master machine and made a directory  with the command `mkdir [directory name]`.
 - So i created an iventory file and added all the ip address i needed which was just one and it belonged to the master machine.
+<br>
+
+![ip ](https://user-images.githubusercontent.com/105651785/197264483-3fc3e87e-6854-4d6c-a95d-68ad2f39c95e.png)
+
 - Then i created a playbook file and added the task i want it to carry out;
 <br>
 
 ![playbook yml](https://user-images.githubusercontent.com/105651785/197257514-4a7ceb81-04fe-4742-aacf-958d91415f01.png)
 - Then i had to go back and create a index.php file to be copied to the server.
+<br>
+
+![index php](https://user-images.githubusercontent.com/105651785/197264272-20c60d82-6e5b-41cc-a5f4-664dfc32a5a2.png)
+
 - Then after the above i ran a check to see if everything is working fine with the command `ansible-playbook playbook.yml -i iventory --check`.
 - After that i ran the real command which is `ansible-playbook playbook.yml -i iventory`. 
 
