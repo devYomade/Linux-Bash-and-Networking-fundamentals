@@ -1,4 +1,4 @@
-``---
+---
 - name: deploy my laravel app
   hosts: all
   remote_user: root
@@ -213,6 +213,6 @@
     - name: move
       shell: ln -s /snap/bin/certbot /usr/bin/certbot
     - name: send mail
-      shell: yes | certbot --apache --agree-tos --redirect -m email@domain.com -d domain.com``
+      shell: yes | certbot --apache --agree-tos --redirect -m email@domain.com -d domain.com
       
                                                                              
